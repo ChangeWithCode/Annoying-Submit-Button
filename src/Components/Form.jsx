@@ -5,7 +5,7 @@ const Form = () => {
     password: "",
   });
 
-  const [toggleClass, setToggleClass] = useState(true);
+  const [toggleClass, setToggleClass] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,10 +21,13 @@ const Form = () => {
   };
 
   return (
-    <div class="px-4 py-16">
-      {console.log(formData)}
+    <div class=" px-4 py-16">
+        {console.log(toggleClass)}
       <div class="mx-auto max-w-lg bg-black rounded">
-        <div class="mb-0 mt-6 space-y-4 rounded-lg py-28 px-4 shadow-lg ">
+        <div
+          action=""
+          class="mb-0 mt-6 space-y-4 rounded-lg py-28 px-4 shadow-lg "
+        >
           <p class="text-center text-lg font-medium">Sign in to your account</p>
 
           <div>
@@ -61,16 +64,19 @@ const Form = () => {
               />
             </div>
           </div>
-
+            <div className="">
           <button
-            type="submit"
-            class={`float-${
-              toggleClass ? "right" : "left"
+           
+            class={`float-${toggleClass?"right":"left"
             } rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white`}
-            onMouseEnter={annoyingSubmitButton}
+            onMouseEnter={(e) => {
+              e.preventDefault();
+              annoyingSubmitButton();
+            }}
           >
             Sign in
           </button>
+          </div>
         </div>
       </div>
     </div>
