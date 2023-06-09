@@ -5,7 +5,7 @@ const Form = () => {
     password: "",
   });
 
-  const [toggleClass, setToggleClass] = useState(false);
+  const [toggleClass, setToggleClass] = useState(true);
 
   const handleChange = (e) => {
     setFormData({
@@ -15,14 +15,13 @@ const Form = () => {
   };
 
   const annoyingSubmitButton = () => {
-    if (formData.password.length < 6) {
+    if (formData.password.length < 12) {
       setToggleClass((prevState) => !prevState);
     }
   };
 
   return (
     <div class=" px-4 py-16">
-        {console.log(toggleClass)}
       <div class="mx-auto max-w-lg bg-black rounded">
         <div
           action=""
@@ -67,7 +66,7 @@ const Form = () => {
             <div className="">
           <button
            
-            class={`float-${toggleClass?"right":"left"
+            class={`${toggleClass?"float_left":"float_right"
             } rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white`}
             onMouseEnter={(e) => {
               e.preventDefault();
