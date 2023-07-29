@@ -21,44 +21,44 @@ const Form = () => {
   };
 
   return (
-    <div class=" px-4 py-16">
-      <div class="mx-auto max-w-lg bg-black rounded">
+    <div className=" px-4 py-16">
+      <div className="mx-auto max-w-lg bg-black rounded">
         <div
           action=""
-          class="mb-0 mt-6 space-y-4 rounded-lg py-28 px-4 shadow-lg "
+          className="mb-0 mt-6 space-y-4 rounded-lg py-28 px-4 shadow-lg "
         >
-          <p class="text-center text-lg font-medium">Sign in to your account</p>
+          <p className="text-center text-lg font-medium">Sign in to your account</p>
 
           <div>
-            <label for="email" class="sr-only">
+            <label for="email" className="sr-only">
               Email
             </label>
 
-            <div class="relative">
+            <div className="relative">
               <input
                 type="email"
                 name="email"
                 autoComplete={false}
                 value={formData.email}
                 onChange={handleChange}
-                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Enter email"
               />
             </div>
           </div>
 
           <div>
-            <label for="password" class="sr-only">
+            <label for="password" className="sr-only">
               Password
             </label>
 
-            <div class="relative">
+            <div className="relative">
               <input
                 type="password"
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Enter password"
               />
             </div>
@@ -66,7 +66,7 @@ const Form = () => {
             <div className="">
           <button
            
-            class={`${toggleClass?"float_left":"float_right"
+            className={`${toggleClass?"float_left":"float_right"
             } rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white`}
             onMouseEnter={(e) => {
               e.preventDefault();
